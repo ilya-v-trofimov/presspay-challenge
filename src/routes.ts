@@ -1,5 +1,7 @@
 import { Express, Request, Response, NextFunction } from 'express';
 
+// const OMDB_API_KEY = process.env['OMDB_API_KEY'];
+
 export const registerRoutes = (app: Express) => {
   app.get('/healthcheck', healthcheck);
 };

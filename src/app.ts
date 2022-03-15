@@ -1,8 +1,9 @@
 import express from 'express';
 import { registerRoutes } from './routes';
 
-const OMDB_API_KEY = process.env['OMDB_API_KEY'];
 const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 const port = 3000;
 registerRoutes(app)
 app.listen(port, () => {
